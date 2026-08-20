@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Urban | Gorra de béisbol en WebAR</title>
+  <title>ADIDAS TERREX | Calzado outdoor en WebAR</title>
 
   <script
     type="module"
@@ -15,10 +15,11 @@
 
   <style>
     :root {
-      --color-principal: #000000;
+      --color-principal: #111111;
       --color-secundario: #ffffff;
-      --color-gris: #eeeeee;
+      --color-gris: #f2f2f2;
       --color-promocion: #d71920;
+      --color-verde: #5a7d3a;
     }
 
     * {
@@ -37,13 +38,19 @@
     header {
       background-color: var(--color-principal);
       color: var(--color-secundario);
-      padding: 20px;
+      padding: 22px;
       text-align: center;
     }
 
     header h1 {
       font-size: 2rem;
-      letter-spacing: 3px;
+      letter-spacing: 4px;
+      font-weight: 800;
+    }
+
+    header p {
+      margin-top: 5px;
+      color: #dddddd;
     }
 
     main {
@@ -63,6 +70,7 @@
       background-color: var(--color-gris);
       border-radius: 18px;
       overflow: hidden;
+      position: relative;
     }
 
     model-viewer {
@@ -84,11 +92,22 @@
       font-size: 1rem;
       font-weight: bold;
       cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+
+    .ar-button:hover {
+      opacity: 0.85;
     }
 
     .informacion h2 {
       font-size: 2.3rem;
-      margin-bottom: 15px;
+      margin-bottom: 8px;
+    }
+
+    .subtitulo {
+      color: #666666;
+      font-size: 1rem;
+      margin-bottom: 18px;
     }
 
     .descripcion {
@@ -99,6 +118,10 @@
     .beneficios {
       margin: 20px 0;
       padding-left: 22px;
+    }
+
+    .beneficios li {
+      margin-bottom: 8px;
     }
 
     .precio-anterior {
@@ -137,6 +160,15 @@
       text-align: center;
     }
 
+    .qr-section h2 {
+      margin-bottom: 8px;
+    }
+
+    .qr-section p {
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
     #qrCode {
       display: flex;
       justify-content: center;
@@ -170,73 +202,99 @@
 </head>
 
 <body>
+
   <header>
-    <h1>URBAN</h1>
-    <p>Estilo urbano en cada detalle</p>
+    <h1>ADIDAS TERREX</h1>
+    <p>Aventura sin límites</p>
   </header>
 
   <main>
+
     <section class="producto">
+
       <div class="visor">
+
         <model-viewer
-          src="modelo.glb"
-          alt="Modelo tridimensional de una gorra de béisbol"
+          src="adidas-terrex.glb"
+          alt="Modelo tridimensional de unas zapatillas Adidas Terrex"
           ar
           ar-modes="webxr scene-viewer quick-look"
           ar-placement="floor"
-          ar-scale="auto"
           camera-controls
           auto-rotate
           shadow-intensity="1.2"
           exposure="1"
           touch-action="pan-y">
 
-          <button class="ar-button" slot="ar-button" type="button">
+          <button
+            class="ar-button"
+            slot="ar-button"
+            type="button">
             Ver en mi espacio
           </button>
+
         </model-viewer>
+
       </div>
 
       <div class="informacion">
-        <h2>Gorra de béisbol New Era</h2>
+
+        <h2>Adidas Terrex</h2>
+
+        <p class="subtitulo">
+          Calzado outdoor para aventura y exploración
+        </p>
 
         <p class="descripcion">
-          Gorra de béisbol New Era con estilo urbano, diseño auténtico y
-          ajuste cómodo, ideal para complementar cualquier look casual.
+          Las Adidas Terrex están diseñadas para acompañarte en terrenos
+          exigentes, combinando comodidad, estabilidad y un estilo deportivo
+          ideal para actividades al aire libre y uso diario.
         </p>
 
         <ul class="beneficios">
-          <li>Diseño urbano y deportivo.</li>
-          <li>Ajuste cómodo para uso diario.</li>
-          <li>Ideal para jóvenes amantes de la moda y el béisbol.</li>
+          <li>Diseño deportivo y outdoor.</li>
+          <li>Construcción pensada para terrenos variados.</li>
+          <li>Comodidad para caminatas y actividades al aire libre.</li>
+          <li>Diseño versátil para combinar aventura y estilo urbano.</li>
         </ul>
 
-        <p class="precio-anterior">Antes: $250.000 COP</p>
-        <p class="precio-actual">Hoy: $199.900 COP</p>
+        <p class="precio-anterior">
+          Antes: $699.900 COP
+        </p>
+
+        <p class="precio-actual">
+          Hoy: $559.900 COP
+        </p>
 
         <a
           class="cta"
-          href="https://www.neweracap.com.co/gorra-new-york-yankees-mlb-seasonal-colors-9forty-ajustable-negro-new-era-60691059/p?gad_source=1&amp;gad_campaignid=22638798699&amp;gbraid=0AAAAAquPgKnLAepCxjOdNtb7NCYkAKN0L&amp;gclid=CjwKCAjw1bvTBhBbEiwAzbP8L4BPLSy9BilzN4juYugwU1Wxrk7-EiDTupRrDJ1xneXeGuHZGMCsohoCJYcQAvD_BwE"
+          href="https://www.adidas.co/terrex"
           target="_blank"
           rel="noopener noreferrer">
           Comprar ahora
         </a>
+
       </div>
+
     </section>
 
     <section class="qr-section">
-      <h2>Explora la gorra desde tu celular</h2>
+
+      <h2>Explora las Adidas Terrex desde tu celular</h2>
+
       <p>
-        Escanea el código QR para abrir la experiencia y usar la realidad
-        aumentada desde un dispositivo compatible.
+        Escanea el código QR para abrir la experiencia 3D y visualizar
+        el producto en realidad aumentada desde un dispositivo compatible.
       </p>
 
       <div id="qrCode"></div>
+
     </section>
+
   </main>
 
   <footer>
-    <p>Urban · Experiencia comercial WebAR</p>
+    <p>Adidas Terrex · Experiencia comercial WebAR</p>
   </footer>
 
   <script>
@@ -247,5 +305,6 @@
       correctLevel: QRCode.CorrectLevel.H
     });
   </script>
+
 </body>
 </html>
